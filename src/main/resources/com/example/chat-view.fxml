@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.ChatController">
+
+    <!-- TOP: topic + connect/disconnect -->
+    <top>
+        <HBox spacing="5">
+            <padding>
+                <Insets top="5" right="5" bottom="5" left="5"/>
+            </padding>
+
+            <TextField fx:id="topicField" promptText="Topic"/>
+            <Button fx:id="connectButton" text="Connect" onAction="#onConnect"/>
+            <Button fx:id="disconnectButton" text="Disconnect" onAction="#onDisconnect"/>
+        </HBox>
+    </top>
+
+    <center>
+        <ListView fx:id="messageList"/>
+    </center>
+
+    <bottom>
+        <HBox spacing="5">
+            <padding>
+                <Insets top="5" right="5" bottom="5" left="5"/>
+            </padding>
+
+            <TextField fx:id="inputField"
+                       promptText="Skriv ett meddelande"
+                       HBox.hgrow="ALWAYS"/>
+            <Button fx:id="sendButton"
+                    text="Skicka"
+                    onAction="#onSend"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>
