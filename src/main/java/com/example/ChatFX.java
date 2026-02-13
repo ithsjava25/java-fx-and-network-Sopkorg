@@ -18,7 +18,7 @@ public class ChatFX extends Application {
         controller.setModel(model);
 
         Scene scene = new Scene(root, 640, 480);
-        stage.setTitle("Min ChatApp (lokal)");
+        stage.setTitle("ChatApp");
         stage.setScene(scene);
         stage.show();
     }
